@@ -1,7 +1,7 @@
 // Gnome Sort
 // My favorite sorting algorithm ever!!!!
 
-arr = [4, 8, 2, 1, 10, 9, 7, 3, 6, 5];
+unsortedArr = [4, 8, 2, 1, 10, 9, 7, 3, 6, 5];
 sortedArr = [];
 
 const sleepSort = (arr) => {
@@ -12,7 +12,7 @@ const sleepSort = (arr) => {
   });
 };
 
-sleepSort(arr);
+sleepSort(unsortedArr);
 
 setTimeout(() => {
   console.log(sortedArr)
