@@ -35,3 +35,6 @@ const monkeySort = (arr) => {
 
 const sorted = monkeySort(unsortedArr);
 console.log(sorted);
+
+// Big O Time Complexity: Approximately O(n!). However, given that the array is shuffled at random, the time is hypothetically infinite.
+// Big O Space Complexity: O(1)
