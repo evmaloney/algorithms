@@ -28,8 +28,8 @@ def to_binary(num):
         
     return build_binary(num, curr_exponent)
 
-# solution = to_binary(34)
-# print(solution)
+solution = to_binary(34)
+print(solution)
 
 
 # Refactored `to_binary` func
@@ -45,3 +45,13 @@ def convert_to_binary(num):
 
 solution = convert_to_binary(34)
 print(solution)
+
+
+## Slick solution I found @ https://www.programiz.com/python-programming/examples/decimal-binary-recursion
+def slick_convert(num):
+   if num > 1:
+       slick_convert(num//2)
+   print(num % 2,end = '')
+
+slick_convert(34)
+print()
