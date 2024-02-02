@@ -5,11 +5,11 @@ def build_binary(num, exp, binary_str = ""):
     if exp < 0:
         return int(binary_str)
     
-    curr_factorial = 2 ** exp
+    curr_pow = 2 ** exp
     
-    if num - curr_factorial >= 0:
+    if num - curr_pow >= 0:
         binary_str += "1"
-        num -= curr_factorial
+        num -= curr_pow
     else:
         binary_str += "0"
         
@@ -28,5 +28,20 @@ def to_binary(num):
         
     return build_binary(num, curr_exponent)
 
-solution = to_binary(34)
+# solution = to_binary(34)
+# print(solution)
+
+
+# Refactored `to_binary` func
+def convert_to_binary(num):
+    if num == 0:
+      return 0
+    
+    max_exp = 0
+    while 2 ** max_exp <= num:
+        max_exp += 1
+        
+    return build_binary(num, max_exp - 1)
+
+solution = convert_to_binary(34)
 print(solution)
